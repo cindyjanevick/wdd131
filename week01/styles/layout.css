@@ -1,50 +1,116 @@
-body
-{ margin: 0; 
-  font-family: Arial, sans-serif; 
-} 
-.container 
-{ display: flex; 
-  flex-direction: column;
-  min-height: 100vh; 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rock+Salt&display=swap');
+
+:root {
+    --back_color1: #0d1b2ae3;
+    --back_color2: #5f5656;
+    --back_color3: #bababa;
+    --text_color1: #ffffff;
+    --text_color2: #000000;
+    --wild_red: #FF0000;
 }
-header  
-{ background-color: #333; 
+
+header {
+  padding: 0px;
+  background-color: var(--back_color2);
+  border: 1px solid var(--back_color2);
+}
+
+body  {
+  margin: 0 auto;
+  max-width: 1000px;
+  /* padding: 20px; */
+  justify-content: center;
+}
+
+footer  {
+  max-width: 1000px;
+  min-height: 150px;
+  padding: 10px;
   color: white;
-  text-align: left; 
-  padding: 1em 1em 4em;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: var(--back_color2);
 }
-footer 
-{ background-color: #333; 
+
+section, aside {
+  text-align: left;
+  padding: 20px 10px 100px 20px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  text-align: left;
+  padding: 20px 20px 60px 20px;
   color: white;
-  text-align: center; 
-  padding: 1em 1em 4em;
-  margin-top:auto;
 }
+
+p {
+	text-align: left;
+	font-size: 1.2rem;
+}
+
+/* Padding: top right bottom left */
 nav {
-  background-color: #000; 
-  color: white; 
-}
-nav ul { 
+  flex: 1 1 100%;
+  display: block;
+	color: white;
+  padding: 5px;
   display: flex;
-  list-style: none; 
-  padding: 0; 
-  margin: 0; 
+	background-color: #333;
+	align-items: center;
 }
-nav ul li { 
-    flex: 1; 
-    text-align: center; 
-    padding: 1em; 
+
+nav a {
+  flex: 1 1 100%;
+	display: block;
+	color: white;
+	padding: 0.75rem;
+	text-decoration: none;
+	text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+nav a:hover {
+	font-weight: 700;
+  color: black;
+  background-color: yellow;
+	text-decoration: underline;
+	text-decoration-color: red;
+}
+
+/* ------ CLASSES ------ */
+
+.grid-container { 
+  display: grid;    
+  max-width: 100%;
+  margin: 0 auto;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.wrap {
+		flex-wrap: wrap;
+}
+
+/* .header {
+  background-color: var(--back_color2);
+} */
+
+/* .grid-item1 {
+  grid-column: 1 / span 4;
+} */
+
+.grid-item1 {
+  grid-column: 1 / span 3;
+  background-color: lightgray;
+  font-size: 1.2rem;
+  text-align: left;
+  padding: 20px 10px 250px 20px;
+}
+
+.grid-item2 {
+  grid-column: 4;
+  background-color: white;
+  font-size: 1.2rem;
 } 
-.content
-{ display: flex; 
-  flex: 1;
-}
-.main
-{ flex: 3;
-  background-color: #ccc;
-  padding: 1em; }
-.aside
-{ flex: 1; 
-  background-color: #fff; 
-  padding: 1em;
-}
+
