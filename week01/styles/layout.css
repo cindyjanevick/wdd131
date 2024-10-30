@@ -1,24 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rock+Salt&display=swap');
 
 :root {
-    --back_color1: #0d1b2ae3;
-    --back_color2: #5f5656;
-    --back_color3: #bababa;
+    --back_color1: #5aa98ee3;
+    --back_color2: #c74e4e;
+    --back_color3: #c3ab35;
     --text_color1: #ffffff;
     --text_color2: #000000;
-    --wild_red: #FF0000;
 }
 
 header {
   padding: 0px;
-  background-color: var(--back_color2);
-  border: 1px solid var(--back_color2);
+  background-color: var(--back_color1);
+  border: 1px solid var(--back_color1);
 }
 
 body  {
   margin: 0 auto;
   max-width: 1000px;
-  /* padding: 20px; */
   justify-content: center;
 }
 
@@ -32,9 +30,9 @@ footer  {
   background-color: var(--back_color2);
 }
 
-section, aside {
+aside {
   text-align: left;
-  padding: 20px 10px 100px 20px;
+  padding: 0px 10px 100px 20px;
 }
 
 h1 {
@@ -49,7 +47,6 @@ p {
 	font-size: 1.2rem;
 }
 
-/* Padding: top right bottom left */
 nav {
   flex: 1 1 100%;
   display: block;
@@ -74,12 +71,10 @@ nav a {
 nav a:hover {
 	font-weight: 700;
   color: black;
-  background-color: yellow;
+  background-color: rgb(147, 170, 178);
 	text-decoration: underline;
 	text-decoration-color: red;
 }
-
-/* ------ CLASSES ------ */
 
 .grid-container { 
   display: grid;    
@@ -92,25 +87,17 @@ nav a:hover {
 		flex-wrap: wrap;
 }
 
-/* .header {
-  background-color: var(--back_color2);
-} */
-
-/* .grid-item1 {
-  grid-column: 1 / span 4;
-} */
-
 .grid-item1 {
   grid-column: 1 / span 3;
-  background-color: lightgray;
+  background-color: rgb(233, 236, 139);
   font-size: 1.2rem;
   text-align: left;
-  padding: 20px 10px 250px 20px;
+  padding: 0px 10px 250px 20px;
 }
 
 .grid-item2 {
   grid-column: 4;
-  background-color: white;
+  background-color: rgb(207, 125, 203);
   font-size: 1.2rem;
 } 
 
