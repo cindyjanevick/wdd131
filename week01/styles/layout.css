@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rock+Salt&display=swap');
-
 :root {
     --back_color1: #5aa98ee3;
     --back_color2: #c74e4e;
@@ -9,95 +7,92 @@
 }
 
 header {
-  padding: 0px;
-  background-color: var(--back_color1);
-  border: 1px solid var(--back_color1);
+    padding: 0px;
+    background-color: var(--back_color1);
+    border: 1px solid var(--back_color1);
 }
 
-body  {
-  margin: 0 auto;
-  max-width: 1000px;
-  justify-content: center;
+body {
+    margin: 0 auto;
+    max-width: 1000px;
+    justify-content: center;
 }
 
-footer  {
-  max-width: 1000px;
-  min-height: 150px;
-  padding: 10px;
-  color: white;
-  font-size: 1.5rem;
-  text-align: center;
-  background-color: var(--back_color2);
+footer {
+    max-width: 1000px;
+    min-height: 150px;
+    padding: 10px;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: var(--back_color2);
 }
 
 aside {
-  text-align: left;
-  padding: 0px 10px 100px 20px;
+    text-align: left;
+    padding: 0px 10px 100px 20px;
 }
 
 h1 {
-  font-size: 1.5rem;
-  text-align: left;
-  padding: 20px 20px 60px 20px;
-  color: white;
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 20px 20px 60px 20px;
+    color: white;
 }
 
 p {
-	text-align: left;
-	font-size: 1.2rem;
+    text-align: left;
+    font-size: 1.2rem;
 }
 
 nav {
-  flex: 1 1 100%;
-  display: block;
-	color: white;
-  padding: 5px;
-  display: flex;
-	background-color: #333;
-	align-items: center;
+    flex: 1 1 100%;
+    
+    
+    padding: 5px;
+    display: flex;
+    background-color: #333;
+    align-items: center;
 }
 
 nav a {
-  flex: 1 1 100%;
-	display: block;
-	color: white;
-	padding: 0.75rem;
-	text-decoration: none;
-	text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
+    flex: 1 1 100%;
+    display: block;
+    color: white;
+    padding: 0.75rem;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 nav a:hover {
-	font-weight: 700;
-  color: black;
-  background-color: rgb(147, 170, 178);
-	text-decoration: underline;
-	text-decoration-color: red;
+    font-weight: 700;
+    color: black;
+    background-color: rgb(147, 170, 178);
+    text-decoration: underline;
+    text-decoration-color: red;
 }
 
-.grid-container { 
-  display: grid;    
-  max-width: 100%;
-  margin: 0 auto;
-  grid-template-columns: repeat(4, 1fr);
+.grid-container {
+    display: grid;
+    max-width: 100%;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .wrap {
-		flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .grid-item1 {
-  grid-column: 1 / span 3;
-  background-color: rgb(233, 236, 139);
-  font-size: 1.2rem;
-  text-align: left;
-  padding: 0px 10px 250px 20px;
+    grid-column: 1 / span 3;
+    background-color: rgb(233, 236, 139);
+   
+    padding: 0px 10px 250px 20px;
 }
 
 .grid-item2 {
-  grid-column: 4;
-  background-color: rgb(207, 125, 203);
-  font-size: 1.2rem;
-} 
-
+    grid-column: 4;
+    background-color: rgb(207, 125, 203);
+}
