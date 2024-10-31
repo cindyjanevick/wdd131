@@ -29,7 +29,6 @@ footer {
 }
 
 aside {
-    text-align: left;
     padding: 0px 10px 100px 20px;
 }
 
@@ -45,10 +44,7 @@ p {
     font-size: 1.2rem;
 }
 
-nav {
-    flex: 1 1 100%;
-    
-    
+nav { 
     padding: 5px;
     display: flex;
     background-color: #333;
@@ -70,9 +66,7 @@ nav a:hover {
     font-weight: 700;
     color: black;
     background-color: rgb(147, 170, 178);
-    text-decoration: underline;
-    text-decoration-color: red;
-}
+    }
 
 .grid-container {
     display: grid;
@@ -81,14 +75,11 @@ nav a:hover {
     grid-template-columns: repeat(4, 1fr);
 }
 
-.wrap {
-    flex-wrap: wrap;
-}
+
 
 .grid-item1 {
     grid-column: 1 / span 3;
     background-color: rgb(233, 236, 139);
-   
     padding: 0px 10px 250px 20px;
 }
 
