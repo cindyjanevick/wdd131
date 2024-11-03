@@ -3,9 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <title>WDD 131 - Dynamic Web Fundamentals -Cindy Jane Vick</title>    
+    <meta name="description" content="Home page of the first week assignment of Dynamic Web Fundamentals">
+    <meta name="author" content="Cindy Jane Vick">
+    <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
-    <h1>WDD 131 - Cindy Jane Vick</h1>
-</body>
-</html>
+    <header>
+        <h1>WDD 131: Dynamic Web Fundamentals - <span>Cindy Jane Vick</span> </h1>
+        <nav>
+          <a href="https://www.linkedin.com/in/cliffcummings/" target="_blank">LinkedIn </a>
+          <a href="https://byui.instructure.com/" target="_blank">I-Learn</a>
+          <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/25?lang=eng" target="_blank">Scripture</a>
+          <a href="#">Final Project</a>
+        </nav>
+      </header>
+    
+      <main>
+        <div class="card">
+          <div class="card1">
+            <h2>About Me</h2>
+            <div class="text1">
+            <p>
+                My name is Cindy and I was born in Peru in South America. I'm currently living in Misawa, Japan. I became a mom of twins recently and I love taking care of my children at home. I love to travel and solve puzzles and legos.
+            </p>
+            <img src="images/me.jpeg" alt="Cindy Vick" width="75" height="50">
+            </div>
+            <h2>Lima, Peru</h2>
+            <hr>
+            <div class="text2">
+            <figure>
+                <img src="images/peruflag.png" alt="flag" width="130" height ="170" class="img-left">
+                <figcaption>Official Flag of Peru</figcaption>
+            </figure>
+            <p>
+                Peru, located in South America, is celebrated for its breathtaking landscapes, from the Andes mountains to the lush Amazon rainforest. It's home to Machu Picchu, a famous Incan citadel and UNESCO World Heritage site. Peru's cuisine is diverse and world-renowned, featuring iconic dishes like *ceviche* (fresh fish marinated in citrus), *lomo saltado* (stir-fried beef), and hearty stews such as *aji de gallina*. This culinary diversity reflects a fusion of indigenous, Spanish, African, and Asian influences, making Peru a top destination for food lovers.
+            </p>
+            </div>
+          </div>
+        
+          <div class="card2">
+            <section>
+              <h2>Web Dev Resources</h2>
+              
+              <ul>
+                <li><a href="#">Dev.to Community</a></li>
+                        <li><a href="#">Smashing Magazine</a></li>
+                        <li><a href="#">Css Tricks</a></li>
+                        <li><a href="#">W3 Schools</a></li>
+                        <li><a href="#">Udemy</a></li>
+                        <li><a href="#">Lorem Picsum Image Placeholder</a></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </main>
+    
+      <footer>
+        <p>&copy;<span id="currentyear"></span> | Cindy Jane Vick | Japan </p>
+        <p id="lastModified"></p>
+      </footer>
+      <script src="scripts/getdates.js" defer></script>
+    </body>
+    
+    </html>
