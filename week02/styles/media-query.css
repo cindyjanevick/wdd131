@@ -7,7 +7,7 @@ header, main, footer {
     margin:1rem auto;
     border:1px solid #bbb;
     padding:1rem;
-    background-color: #75758860;
+    background-color: #3737a960;
 }
 
 
@@ -19,5 +19,5 @@ main{
 
 section{
     padding:1rem;
-    background-color: #fff;
+    background-color: #ffffffe4;
 }
