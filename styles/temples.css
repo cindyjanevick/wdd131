@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    font-family: "Delius", cursive;
+    font-style: normal;
+}
+
+header {
+    background-color:#2A2E43 ;
+    padding: 1rem;
+}
+
+h1 {
+    align-self: center;
+    color:  #FFD700;
+    font-weight: 900;
+    text-align: left;
+    letter-spacing: 0.1rem;
+    margin-top: 0.5rem;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 900;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+a, figcaption, p {
+    font-family:"Geist", sans-serif;
+    font-style: normal;
+    
+}
+
+.navigation {
+    list-style: none;
+    background-color: #2A2E43;
+    flex-wrap: wrap;
+}
+
+.navigation a {
+    display: none;
+    color: #e9c212;
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem;
+    transition: all 0.4s;
+}
+
+#active {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: overline;
+    font-weight: 700;
+}
+
+nav a:hover, nav a:focus {
+    color: #e36f0a;
+    font-size: 1.6rem;
+
+}   
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    color: #fdd835;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content:"☰";
+}
+
+#menu.open::before {
+    content: "X";
+}
+
+.open a {
+    display: block;
+}
+
+.gallery-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem 0 2rem;
+}
+
+.gallery-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 1rem;
+}
+
+img {
+    border-radius: 1rem;
+    box-shadow: 0 0 0.5rem;
+}
+
+figcaption {
+    margin-top: 0.2rem;
+    text-align: center;
+}
+
+footer {
+    color: #F5F5F5;
+    background-color: #2A2E43;
+    border-top: 1px solid rgb(18, 35, 129);
+    border-bottom: 1px solid rgb(18, 35, 129);
+    text-align: center;
+    padding:20px;
+} 
+
+footer p {
+    font-size: 1.2rem;
+    color: #fff;
+    
+
+}
+#lastModified{
+    color:#fdd835;}

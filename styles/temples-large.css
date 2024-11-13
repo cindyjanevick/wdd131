@@ -1,0 +1,39 @@
+/* Media Query for wider than mobile viewports.*/
+@media (min-width: 40em) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .navigation a {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .gallery-main {
+        max-width: 1200px;
+        flex: 1 1 100%;
+    }
+    
+    .gallery-images {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        gap: 2rem;
+        justify-items: center;
+        flex: 1 1 100%;
+    }
+
+}
