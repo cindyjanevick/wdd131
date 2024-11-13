@@ -1,3 +1,13 @@
+:root{
+    --gold: #FFD700;
+    --dark-blue: #2A2E43;
+    --soft-gold: #e9c212;
+    --white: rgba(255, 255, 255, 1);
+    --orange: #e36f0a;
+    --bright-yellow: #fdd835;
+    --navy-blue: rgb(18, 35, 129);
+}
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -9,13 +19,13 @@ h1, h2 {
 }
 
 header {
-    background-color:#2A2E43 ;
+    background-color:var(--dark-blue) ;
     padding: 1rem;
 }
 
 h1 {
     align-self: center;
-    color:  #FFD700;
+    color: var(--gold);
     font-weight: 900;
     text-align: left;
     letter-spacing: 0.1rem;
@@ -39,13 +49,13 @@ a, figcaption, p {
 
 .navigation {
     list-style: none;
-    background-color: #2A2E43;
+    background-color:var(--dark-blue);
     flex-wrap: wrap;
 }
 
 .navigation a {
     display: none;
-    color: #e9c212;
+    color: var(--soft-gold);
     font-size: 1.5rem;
     text-align: center;
     text-decoration: none;
@@ -54,13 +64,13 @@ a, figcaption, p {
 }
 
 #active {
-    color: rgba(255, 255, 255, 1);
+    color: var(--white);
     text-decoration: overline;
     font-weight: 700;
 }
 
 nav a:hover, nav a:focus {
-    color: #e36f0a;
+    color: var(--orange);
     font-size: 1.6rem;
 
 }   
@@ -71,7 +81,7 @@ nav a:hover, nav a:focus {
     font-weight: 700;
     text-decoration: none;
     padding: .5rem .75rem;
-    color: #fdd835;
+    color: var(--bright-yellow);
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -117,9 +127,9 @@ figcaption {
 
 footer {
     color: #F5F5F5;
-    background-color: #2A2E43;
-    border-top: 1px solid rgb(18, 35, 129);
-    border-bottom: 1px solid rgb(18, 35, 129);
+    background-color: var(--dark-blue);
+    border-top: 1px solid var(--navy-blue);
+    border-bottom: 1px solid var(--navy-blue);
     text-align: center;
     padding:20px;
 } 
@@ -131,4 +141,4 @@ footer p {
 
 }
 #lastModified{
-    color:#fdd835;}
+    color:var(--bright-yellow);}
