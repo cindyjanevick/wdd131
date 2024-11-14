@@ -76,7 +76,7 @@ nav a:hover, nav a:focus {
 }   
 
 #menu {
-    display: block;
+    /* display: block; */
     font-size: 2rem;
     font-weight: 700;
     text-decoration: none;
@@ -103,17 +103,17 @@ nav a:hover, nav a:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 100%;
+    /* max-width: 100%; */
     margin: 0 auto;
     padding: 2rem 0 2rem;
 }
 
-.gallery-images {
+/* .gallery-images {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
     gap: 1rem;
-}
+} */
 
 img {
     border-radius: 1rem;
@@ -126,7 +126,7 @@ figcaption {
 }
 
 footer {
-    color: #F5F5F5;
+    /* color: #F5F5F5; */
     background-color: var(--dark-blue);
     border-top: 1px solid var(--navy-blue);
     border-bottom: 1px solid var(--navy-blue);
