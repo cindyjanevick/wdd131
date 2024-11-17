@@ -78,6 +78,8 @@ body {
 
 .value {
     text-align: left;
+    list-style: none;
+    padding-left: 0;
 }
 
 .weather-icon {
