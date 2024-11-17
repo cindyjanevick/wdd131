@@ -27,11 +27,17 @@ body {
     color: var(--main-text-color);
 }
 .jp h1::after{
-    content: ' 🇯🇵'; /* Adds a Japanese flag emoji after the text */
-    font-size: 1.2em; /* Adjust size if needed */
-    margin-left: 8px; /* Adds spacing between the text and the flag */
-    color: #fff; /* Matches text color */
+    content: "";
+    display: inline-block;
+    width: 24px; /* Set the width of the flag */
+    height: 16px; /* Set the height of the flag */
+    background-image: url('../images/japan_icon.png'); /* Path to the image */
+    background-size: cover; /* Ensures the flag fits within the element */
+    background-position: center; /* Ensures the image is centered within the box */
+    margin-left: 8px; /* Optional: adds space between the title and the flag */
 }
+
+
 .space-top {
     width: 100%;
     height: 15px;
@@ -68,6 +74,13 @@ body {
     padding-bottom: 30px;
     color:var(--tab-text-color);
 
+}
+.custom-hr {
+    border-color: rgb(238, 255, 213);
+}
+.weather-img {
+    width: 60px;
+    height: 60px;
 }
 
 .key {

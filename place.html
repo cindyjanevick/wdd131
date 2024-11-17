@@ -7,7 +7,7 @@
     <meta name="author" content="Cindy Jane Vick">
     <meta name="description"
         content="some data about Japan such as its weather conditions and notable information about the country.">
-    <title>Japan</title>
+    <title>About Japan</title>
 
     <link rel="stylesheet" href="styles/place.css">
     <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -34,7 +34,7 @@
         <div class="space-between"></div>
 
         <div class="tab1">
-            <h2 class="data" title="Abuja">Data</h2>
+            <h2 class="data" title="Japan">Data</h2>
 
             <ul class="key">
                 <li><strong>Area:</strong></li>
@@ -59,7 +59,8 @@
             </ul>
         </div>
 
-        <hr style="border-color: rgb(238, 255, 213)" />
+        <hr class="custom-hr" />
+
 
 
 
@@ -70,20 +71,21 @@
 
                 <div class="weatherIcon">
                     <h2 class="weather">Weather</h2>
-                    <img src="images/cloudy.png" alt="cloudy" style="width: 60px; height: 60px;">
+                    <img src="images/weather.svg" alt="cloudy" class="weather-img" />
+
                 </div>
 
             </div>
             <!-- Weather Icon Ended -->
 
-            <ul class="key" style="list-style: none; padding-left: 0">
+            <ul class="key" >
                 <li><strong>Temperature:</strong></li>
                 <li><strong>Conditions:</strong></li>
                 <li><strong>Wind:</strong></li>
                 <li><strong>Wind Chill:</strong></li>
             </ul>
 
-            <ul class="value" style="list-style: none; padding-left: 0">
+            <ul class="value">
                 <li><span id="temp">Loading...</span>°C</li>
                 <li><span id="conditions">Loading...</span></li>
                 <li><span id="wind">Loading...</span> m/s</li>
