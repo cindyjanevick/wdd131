@@ -26,7 +26,12 @@ body {
     font-size: 1rem;
     color: var(--main-text-color);
 }
-
+.jp h1::after{
+    content: ' 🇯🇵'; /* Adds a Japanese flag emoji after the text */
+    font-size: 1.2em; /* Adjust size if needed */
+    margin-left: 8px; /* Adds spacing between the text and the flag */
+    color: #fff; /* Matches text color */
+}
 .space-top {
     width: 100%;
     height: 15px;
