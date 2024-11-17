@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Cindy Jane Vick">
+    <meta name="description"
+        content="some data about Japan such as its weather conditions and notable information about the country.">
+    <title>About Japan</title>
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header class="jp">
+        <h1>Japan</h1>
+    </header>
+
+    <div class="space-top"></div>
+
+    <main>
+        <picture class="jp-pic">
+            <source srcset="images/red-crane-small.webp" media="(min-width: 1300px)">
+            <source srcset="images/red-crane-medium.webp" media="(min-width: 800px)">
+            <source srcset="images/red-crane-large.webp" media="(min-width: 600px)">
+            <img src="images/red-crane-vertcal.webp" alt="Red Crane" width="300" height="336">
+        </picture>
+
+        <div class="space-between"></div>
+
+        <div class="tab1">
+            <h2 class="data" title="Abuja">Data</h2>
+
+            <ul class="key" style="list-style: none; padding-left: 0">
+                <li><strong>Area:</strong></li>
+                <li><strong>Population:</strong></li>
+                <li><strong>Capital:</strong></li>
+                <li><strong>Languages:</strong></li>
+                <li><strong>Currency:</strong></li>
+                <li><strong>Time Zone:</strong></li>
+                <li><strong>Calling Code:</strong></li>
+                <li><strong>Internet TLD:</strong></li>
+            </ul>
+
+            <ul class="value" style="list-style: none; padding-left: 0">
+                <li>377,944 sq km</li>
+                <li>127 million</li>
+                <li>Tokyo</li>
+                <li>Japanese</li>
+                <li>Yen (JPY)</li>
+                <li>JST (UTC+9)</li>
+                <li>+81</li>
+                <li>.jp</li>
+            </ul>
+        </div>
+
+        <hr style="border-color: rgb(238, 255, 213)" />
+
+
+
+        <div class="tab2">
+            <!-- Weather Icon -->
+
+            <div class="weather-icon">
+
+                <div class="weatherIcon">
+                    <h2 class="weather">Weather</h2>
+                    <img src="images/cloudy.png" alt="cloudy" style="width: 60px; height: 60px;">
+                </div>
+
+            </div>
+            <!-- Weather Icon Ended -->
+
+            <ul class="key" style="list-style: none; padding-left: 0">
+                <li><strong>Temperature:</strong></li>
+                <li><strong>Conditions:</strong></li>
+                <li><strong>Wind:</strong></li>
+                <li><strong>Wind Chill:</strong></li>
+            </ul>
+
+            <ul class="value" style="list-style: none; padding-left: 0">
+                <li><span id="temp">Loading...</span>°C</li>
+                <li><span id="conditions">Loading...</span></li>
+                <li><span id="wind">Loading...</span> m/s</li>
+                <li id="windChill"><sup>o</sup>C</li>
+            </ul>
+        </div>
+        
+    </main>
+
+
+
+    <footer>
+        <div class="foot-nav">
+            <p>&copy; <span id="currentyear"></span> &#127800; Cindy Jane Vick &#127800; Japan</p>
+            <p id="lastmodified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
