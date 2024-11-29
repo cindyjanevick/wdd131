@@ -1,0 +1,99 @@
+/* Media Query for wider than mobile viewports.*/
+@media (min-width: 40em) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .navigation a {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .gallery-main {
+        max-width: 1440px;
+        flex: 1 1 100%;
+    }
+    
+    .container-images {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        gap: 1rem;
+        justify-items: center;
+        flex: 1 1 100%;
+    }
+
+    /* .footer-container {
+            display: grid;
+            grid-template-columns: auto auto;
+            padding: 0.75rem 0;
+     } */
+    
+     footer p {
+        font-family:  "Delius", cursive;
+        font-size: 1.2rem;
+        padding: .2rem;
+        margin: 0.5rem 0;
+    }
+    
+    /* .footer-container-left {
+        text-align: left;
+    } */
+    
+    /* .footer-container-left a {
+        text-decoration: none;
+        color: var(--accent3-color);
+        padding-left: 1rem;
+        font-size: .8rem;
+    } */
+    
+    /* footer a:hover, footer a:focus {
+        color:red;
+        font-weight: 400;
+    }  */
+    
+    /* .footer-container-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        padding-right: 1rem;
+    } */ 
+    
+    /* .container-social-media img{
+        margin-left: .6rem;
+        width: var(--social-media-icon-width);
+        /* color: #FFF; */
+    /* } */
+    
+    /* .footer-container h4 {
+        font-size: 0.6rem;
+    } 
+    
+    .footer-container-bottom {
+        background-color: red;
+        text-align: left;
+    } */
+    
+    /* .footer-container-bottom p {
+        
+        font-family: "Delius", cursive;
+        font-weight: 400;
+        font-size: 0.6rem;
+        padding-left: 1rem;
+    } */
+
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals Temple Album</title>
+    <meta name="description" content="enhance a previous assignment by incorporating lazy loading and to respond to user interaction by filtering the displayed temple data">
+    <meta name="author" content="Cindy Jane Vick">
+    <!-- Google Fonts API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <!-- CSS two files: main and large -->
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <!-- Deferred script loading -->
+    <script src="script/filtered-temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <a href="#" id="menu"></a>`
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" id="home">Home</a></li>
+                <li><a href="#" id="oldTemples">Old</a></li>
+                <li><a href="#" id="newTemples">New</a></li>
+                <li><a href="#" id="largeTemples">Large</a></li>
+                <li><a href="#" id="smallTemples">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content Section -->
+    <main class="gallery-main">
+        <h2>Home</h2>
+        <div class="container-images">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> &#9962; Cindy Jane Vick &#9962; Japan </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
