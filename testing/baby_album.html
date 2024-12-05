@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twin Babies Album</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav id="navigation">
+            <button id="hamButton" class="hamburger-menu"></button>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="outfits.html">Outfits</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section id="banner">
+        <picture>
+            <source media="(max-width: 600px)" srcset="images/red-crane-small.webp">
+            <source media="(min-width: 601px)" srcset="images/red-crane-large.webp">
+            <img src="images/sappo.jpg" alt="Banner Image" class="hero-img">
+        </picture>
+    </section>
+
+    <main>
+        <!-- Welcome Section -->
+        <section id="welcome">
+            <h1>Welcome to Our Twins' Album! 👶👶</h1>
+            <p>Follow the journey of our twins as they grow, with monthly highlights and special moments captured just for you!</p>
+        </section>
+
+        <!-- Baby Info Section -->
+        <section id="baby-info">
+            <div class="baby-data-box">
+                <h2>Baby 1: [Abby Mae]</h2>
+                <div class="baby-info-content">
+                    <img src="images/me-min.jpeg" alt="Abby Mae" loading="lazy" width="250" height="167" class="baby-img ">
+                    <ul>
+                        <li><strong>Age:</strong> <span class="baby1-age">0</span></li>
+                        <li><strong>Height:</strong> 50 cm</li>
+                        <li><strong>Weight:</strong> 3.5 kg</li>
+                        <li><strong>Favorite Food:</strong> Milk</li>
+                        <li><strong>Favorite Toy:</strong> Colorful Rings</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="baby-data-box">
+                <h2>Baby 2: [Lucas Wyatt]</h2>
+                <div class="baby-info-content">
+                    <img src="images/me-min.jpeg" alt="Lucas Wyatt" loading="lazy" width="250" height="167" class="baby-img">
+                    <ul>
+                        <li><strong>Age:</strong> <span class="baby2-age">0</span></li>
+                        <li><strong>Height:</strong> 48 cm</li>
+                        <li><strong>Weight:</strong> 3.3 kg</li>
+                        <li><strong>Favorite Food:</strong> Milk</li>
+                        <li><strong>Favorite Toy:</strong> Otter Ring</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Twin Babies Album | Last Modification: <span id="lastmodified"></span></p>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

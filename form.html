@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals Forms</title>
+    <meta name="description" content="WDD 131 - Product Review Form - Cindy Jane Vick, Images of Temples"> 
+    <meta name="author" content ="Cindy Jane Vick">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+ 
+</head>
+<body>
+    <header>
+        <h1> Product Review</h1>
+    </header>
+    <main>
+        <form action = "review.html" method ="get">
+
+            <label for="product">Chocolate Type</label>
+            <select id='product' name="product" required>
+                <option value="" disabled selected > Select a Product...</option>
+                
+                <label for="install-date">Ate of Instalaon </label>
+            
+            </select>
+
+        </form>
+
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> &#127803; Cindy Jane Vick &#127803; Japan </p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/form.js" defer> </script>
+</body>
+</html>

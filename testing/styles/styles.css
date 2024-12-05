@@ -1,0 +1,207 @@
+:root {
+    --primary-color-1: #4636bf; /* Persian Blue */
+    --primary-color-2: #FFB3A7; /* Soft Peach */
+    --accent-1: #124421; /*pakistan Green */
+    --accent-2: #E1BEE7; /* Soft Lavender */
+    --accent-3: #FFF9C4; /* Creamy Lemon */
+    --font-family-primary: 'Delius', sans-serif;
+    --font-family-secondary: 'Geist', sans-serif;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-secondary), sans-serif;
+    background-color: var(--accent-3); /* Creamy Lemon background */
+    color: var(--primary-color-1); /* Baby Blue text */
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color-1); /* Baby Blue header */
+    padding: 1rem;
+    color: #ffffff; /* White text for header */
+}
+
+h1 {
+    font-family: var(--font-family-primary);
+    color: var(--primary-color-2); /* Soft Peach text for title */
+    font-weight: 900;
+    text-align: left;
+    letter-spacing: 0.1rem;
+    font-size: 2.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Hamburger Menu */
+#hamButton {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-1); /* Mint Green for button */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: .5rem .75rem;
+    position: relative;
+    z-index: 2;
+}
+
+#hamButton::before {
+    content: "☰";
+}
+
+#hamButton.open::before {
+    content: "X";
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 1rem;
+    color: var(--accent-2); /* Soft Lavender links */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-1); /* Mint Green hover effect */
+}
+
+/* Make the navigation menu responsive */
+@media (max-width: 600px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: var(--primary-color-1); /* Baby Blue */
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    nav ul.open {
+        display: block;
+    }
+
+    #hamButton {
+        display: block;
+    }
+
+    nav ul li a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Banner Section */
+#banner {
+    width: 100%;
+    position: relative;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 5px solid var(--primary-color-2); /* Soft Peach border */
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    background-color: var(--accent-3); /* Creamy Lemon background */
+}
+
+#welcome {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#welcome h1 {
+    font-family: var(--font-family-primary);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color-1); /* Baby Blue text */
+}
+
+#baby-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.baby-data-box {
+    background-color: var(--accent-2); /* Soft Lavender background */
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-basis: 45%;
+    text-align: center;
+    color: var(--primary-color-1); /* Baby Blue text */
+}
+
+.baby-data-box h2 {
+    font-family: var(--font-family-primary);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.baby-data-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.baby-data-box ul li {
+    margin: 0.5rem 0;
+}
+
+.baby-data-box ul li strong {
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color-2); /* Soft Peach */
+    color: #ffffff; /* White text for footer */
+    padding: 1rem;
+    text-align: center;
+    border-top: 2px solid var(--accent-1); /* Mint Green border */
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Last Modified */
+#lastmodified {
+    font-style: italic;
+    color: var(--accent-1); /* Mint Green */
+}
+
+/* Current Year */
+#currentyear {
+    font-weight: bold;
+    color: var(--accent-1); /* Mint Green */
+}
