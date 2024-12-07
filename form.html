@@ -17,14 +17,16 @@
     </header>
 
     <main>
-        <form method="get" action="review.html">  
-            <section id="productName">
-                <h2>Product Name</h2>
-
-                <select id="product-select" name="Product" required>
-                    <option value="" disabled selected>Choose a product...</option>
-                    <!-- Options will be populated by JavaScript -->
-                </select>
+        <form id="review-form" method="get" action="review.html">
+            <fieldset>
+                <legend>Product Review</legend>
+                <div class="form-item">
+                    <label for="product-select">Choose a product to review</label>
+                    <select id="product-select" name="Product" required>
+                        <option value="" disabled selected>Choose a breed...</option>
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </div>
                 
                 
             </section>
