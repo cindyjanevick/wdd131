@@ -23,10 +23,15 @@
   img {
     display: block;
     margin: 0 auto;
+    width:auto;
+                                           
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h5, h6 {
     font-family: var(--heading-font);
-    color: var(--primary-color);
+    color:                                                             var(--primary-color);
+  }
+  h4{
+    color:var(--accent3-color)
   }
   h2 {
     text-align: center;
@@ -63,8 +68,12 @@
   .colors td{
     width: 20%;
     height: 3em;
+    
   }
-  
+   .accent2{
+    color:white;}
+    
+    
   .primary {
     background-color: var(--primary-color);
   }
@@ -80,7 +89,7 @@
   
   p.colored {
     background-color: var(--secondary-color);
-    color: #FFF;
+    color: var(--accent2-color);
     padding:1em;
   }
   
@@ -118,24 +127,9 @@
   
   
   
-  .top {
-    grid-area: top;
-    border-left: 1px solid;
-  }
-  
-  .left {
-    grid-area: left;
-    border-top: 1px solid;
-    border-left: 1px solid;
-  }
-  
-  .right {
-    grid-area: right;
-    border-top: 1px solid;
-    border-right: 1px solid;
-  }
+  /*  */
   footer {
-    /* color: #F5F5F5; */
+   
     background-color: var(--secondary-color);
     border-top: 1px solid var(--secondary-color);
     border-bottom: 1px solid var(--secondary-color);
