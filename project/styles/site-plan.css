@@ -1,30 +1,17 @@
 :root {
     /* Color palette */
-    --primary-color: #008B76; /* Teal Green */
-    --secondary-color: #F49097; /* Soft Coral */
-    --accent1-color: #F5E960; /* Lemon Yellow */
-    --accent2-color: #F2F5FF; /* Soft White */
+    --primary-color: #008B76; 
+    --secondary-color: #F49097; 
+    --accent1-color: #F5E960; 
+    --accent2-color: #1e1e24; 
 
     /* Fonts */
     --heading-font: "Poppins", sans-serif;
     --paragraph-font: "Delius", sans-serif;
     --navigation-font: "Geist", sans-serif;
-    --footer-font: "Work Sans", sans-serif;
+    --footer-font: "Delius", sans-serif;
 
-    /* Specific uses */
-    --headline-color-on-white: #008B76; /* Headlines on white */
-    --headline-color-on-color: #F2F5FF; /* Headlines on a colored background */
-    --paragraph-color-on-white: #333333; /* Paragraph text on white */
-    --paragraph-color-on-color: #F2F5FF; /* Paragraph text on a colored background */
-    --paragraph-background-color: #F49097; /* Soft Coral background */
-    --nav-link-color: #F2F5FF; /* Navigation links */
-    --nav-background-color: #008B76; /* Navigation background */
-    --nav-hover-link-color: #F5E960; /* Lemon Yellow on hover */
-    --nav-hover-background-color: #F49097; /* Soft Coral hover background */
 }
-
-
-  /*  Look around below...but DON'T CHANGE ANYTHING! */
   
   body {
     max-width: 1200px;
@@ -39,7 +26,7 @@
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
-    color: var(--headline-color-on-white);
+    color: var(--primary-color);
   }
   h2 {
     text-align: center;
@@ -52,17 +39,17 @@
   header {
     padding: 1em;
     text-align: center;
-    color: var(--headline-color-on-color);
-    background-color: var(--paragraph-background-color);
+    color: var(--accent2-color);
+    background-color: var(--secondary-color);
   }
   header > h1, header > h2 {
-    color: var(--headline-color-on-color);
+    color:var(--accent2-color);
   }
   
   p {
     font-family: var(--paragraph-font);
-    color: var(--paragraph-color-on-white);
-    padding: 1em;
+    color: var(--accent2-color);
+   
   }
   .colors {
     width: 100%;
@@ -71,7 +58,7 @@
     text-align: center;
   }
   .colors th {
-    background-color: #B7B597;
+    background-color: #92dc98;
   }
   .colors td{
     width: 20%;
@@ -92,12 +79,13 @@
   }
   
   p.colored {
-    background-color: var(--paragraph-background-color);
+    background-color: var(--secondary-color);
     color: #FFF;
+    padding:1em;
   }
   
   nav {
-    background-color: var(--nav-background-color);
+    background-color: var(--primary-col);
     line-height: 3em;
     text-align: center;
     font-size: 1.2em;
@@ -118,47 +106,17 @@
   }
   
   nav a:link, nav a:visited {
-    color: var(--nav-link-color);
+    color: var(--accent2-color);
   }
   
   nav a:hover {
-    color: var(--nav-hover-link-color);
-    background-color: var(--nav-hover-background-color);
+    color: var(--accent1-color);
+    background-color: var(--secondary-color);
     font-family: var(--navigation-font); 
   
   }
   
-  .sitemap {
-    display: grid;
-    justify-content: center;
   
-    grid-template-columns: repeat(6, 15%);
-    grid-template-rows: 3em 1.5em 1.5em 3em;
-    grid-template-areas: ". . home home . ."
-      ". . . top . ."
-      ". left left right right ."
-      "page2 page2 . . page3 page3";
-  }
-  .sitemap > div {
-  
-    text-align: center;
-  
-  }
-  .sm-home {
-    grid-area: home;
-    background-color: #ccc;
-    line-height: 3em;
-  }
-  .sm-page2 {
-    grid-area: page2;
-    background-color: #ccc;
-    line-height: 3em;
-  }
-  .sm-page3 {
-    grid-area: page3;
-    background-color: #ccc;
-    line-height: 3em;
-  }
   
   .top {
     grid-area: top;
@@ -182,14 +140,18 @@
     border-top: 1px solid var(--secondary-color);
     border-bottom: 1px solid var(--secondary-color);
     text-align: center;
-    padding:20px;
-} 
+    padding:10px;
+    } 
 
 footer p {
     font-size: 1.2rem;
-    color: white;
+    color: var(--accent2-color);
+    font-weight: 900;
+    
+
     
 
 }
 #lastModified{
-    color:var(--bright-yellow);}
+    color: var(--accent2-color);
+    font-weight: 900;}
