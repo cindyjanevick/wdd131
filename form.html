@@ -10,26 +10,72 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Delius&family=Geist:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/form.css">
- 
 </head>
 <body>
     <header>
-        <h1> Product Review</h1>
+        <h1>Product Review</h1>
     </header>
+
     <main>
-        <form action = "review.html" method ="get">
+        <form method="get" action="review.html">  
+            <section id="productName">
+                <h2>Product Name</h2>
 
-            <label for="product">Chocolate Type</label>
-            <select id='product' name="product" required>
-                <option value="" disabled selected > Select a Product...</option>
+                <select id="product-select" name="Product" required>
+                    <option value="" disabled selected>Choose a product...</option>
+                    <!-- Options will be populated by JavaScript -->
+                </select>
                 
-                <label for="install-date">Ate of Instalaon </label>
-            
-            </select>
+                </select>
+            </section>
 
+            <h2>Overall Rating</h2>
+            <div class="stars">
+                <label for="rating1">☆<br><input type="radio" id="rating1" name="stars" value="1 star" required></label>
+                <label for="rating2">☆☆<br><input type="radio" id="rating2" name="stars" value="2 star" required></label>
+                <label for="rating3">☆☆☆<br><input type="radio" id="rating3" name="stars" value="3 star" required></label>
+                <label for="rating4">☆☆☆☆<br><input type="radio" id="rating4" name="stars" value="4 star" required></label>
+                <label for="rating5">☆☆☆☆☆<br><input type="radio" id="rating5" name="stars" value="5 star" required></label>
+            </div>
+
+            <div class="purchase">
+                <label for="purchasedate">Date of Purchase</label>
+                <input type="date" id="purchasedate" name="Date of Purchase" required>
+            </div>
+
+            <div class="features">
+                <label>Which features did you like the most in the product?</label>
+                <p>(Check all that apply)?</p>
+
+                <input type="checkbox" id="feature1" name="durability" value="">
+                <label for="feature1">Durability</label><br>
+
+                <input type="checkbox" id="feature2" name="ease of use" value="">
+                <label for="feature2">Ease of Use</label><br>
+
+                <input type="checkbox" id="feature3" name="fabric texture" value="">
+                <label for="feature3">Fabric Quality</label><br>
+                
+                <input type="checkbox" id="feature4" name="design" value="">
+                <label for="feature4">Design</label><br>
+
+                <input type="checkbox" id="feature4" name="comfort" value="">
+                <label for="feature4">Comfort and Fit</label><br>
+            </div>
+
+            <div class="textreview">
+                <label for="review">Written Review (optional)</label>
+                <textarea id="review" name="review" rows="4" placeholder="Write the review here"></textarea>
+
+                <label for="name">Your Name (optional)</label>
+                <input type="text" id="name" name="name" value="">
+            </div>
+
+            <input type="submit" name="submit" id="submit" value="Post Review">
         </form>
-
-    </main>
+    
+            </main>
+       
     <footer>
         <p>&copy;<span id="currentyear"></span> &#127803; Cindy Jane Vick &#127803; Japan </p>
         <p id="lastModified"></p>
