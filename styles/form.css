@@ -1,11 +1,11 @@
 :root {
-    --back_color1: #0D1B2A;
-    --back_color2: #1D5599;
-    --back_color3: #57849C;
-    --accent_color1: #7FC6DE;
+    --back_color1: #0d2a15;
+    --back_color2: #1d9921;
+    --back_color3: #6e9c57;
+    --accent_color1: #a0de7f;
     --accent_color2: #DFDFDF;
     --accent_color3: #EFEFEF;
-    --wild_red: #FF0000;
+    --wild_yellow: #ffe600;
 }
 
 * {
@@ -28,10 +28,10 @@ h2 {
 }
 
 body {
-    font-family: Roboto, sans-serif;
+    font-family: Geist, sans-serif;
 }
 
-/* padding: 0px keeps nav-bar at bottom of header */
+
 header {
     background-color: var(--back_color1);
     padding: 1rem;
@@ -39,8 +39,7 @@ header {
     border: 5px solid var(--back_color1);
 }
 
-/* justify-content: center; */
-/* max-width: 1000px; */
+
 main {
     position: relative;
     padding: 1rem;
@@ -59,9 +58,6 @@ label {
     font-size: 1rem;
     font-weight: 800;
     text-align: left;
-    /* margin-top: 0rem; */
-    /* margin-bottom: .2rem; */
-    /* background-color: red; */
 }
 
 input[type=checkbox] {
@@ -73,10 +69,7 @@ input[type=checkbox] {
     font-size: 1.1rem;
 }
 
-/* input {
-    font-weight: 100;
-    font-size: 3rem;
-} */
+
 #feature1, #feature2 {
     font-weight: 100;
 }
@@ -85,10 +78,10 @@ header, main, footer {
 }
 
 textarea {
-    /* background-color: red; */
+    
     background-color: white;
     width: 100%;
-    font-family: Roboto, sans-serif;
+    font-family: Delius, sans-serif;
     font-size: 1.2rem;
 }
 
@@ -113,16 +106,14 @@ textarea {
     margin-top: 1rem;
 }
 
-/* https://stackoverflow.com/questions/463785/place-radio-button-label-above-using-css */
+
 .stars {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     text-align: center;
 
-    /* For Debug */
-    /* background-color: aqua;
-    border: 5px solid purple; */
+  
 }
 
 .thanks {
@@ -147,16 +138,30 @@ textarea {
     margin-bottom: 1rem;
 }
 
-/* .install label {
-    margin-bottom: 5;
-} */
+
 
 input[type=text] {
     background-color: white;
-    /* background-color: #efac3e; */
+    
     font-size: 1.2rem;
 }
 
-/* input [type="checkbox"] {
-    background-color: blue;
-} */
+footer {
+    background-color: #0d2a15;
+    color: #0d2a15;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid #0d2a15;
+    border-bottom: 1px solid #0d2a15;
+    margin-top: 2rem;
+} 
+
+footer p {
+    /* padding-top: 1rem; */
+    font-size: 1.2rem;
+    color: #fff;
+    padding: 0.1rem;
+}
+#lastModified{
+    color:var(--wild_yellow);}

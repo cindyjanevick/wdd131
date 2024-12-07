@@ -1,5 +1,14 @@
-// const numberReviews = JSON.parse(getStorage('reviewCnt') || 0);
-// textview.textContent = `Number of reviews submitted: ${numberReviews}`;
+document.addEventListener("DOMContentLoaded", function() {
+    const currentYearSpan = document.getElementById("currentyear");
+    const lastModifiedSpan = document.getElementById("lastModified");
+
+    const currentYear = new Date().getFullYear();
+    currentYearSpan.textContent = currentYear;
+
+    lastModifiedSpan.textContent = "Last Modification: " + document.lastModified;
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const productSelect = document.getElementById('product-select'); // Reference to the <select> element
 
@@ -34,15 +43,6 @@ const products = [
         }
     });
 
-    document.addEventListener("DOMContentLoaded", function() {
-        const currentYearSpan = document.getElementById("currentyear");
-        const lastModifiedSpan = document.getElementById("lastModified");
     
-        const currentYear = new Date().getFullYear();
-        currentYearSpan.textContent = currentYear;
-    
-        
-        lastModifiedSpan.textContent = "Last Modification: " + document.lastModified;
-    });
     
 })
