@@ -1,48 +1,34 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const checkboxes = document.querySelectorAll('input[name="Feature"]');
-    const form = document.querySelector('form');
-    const productSelect = document.getElementById('product-select');
+document.addEventListener('DOMContentLoaded', function () {
+  const products = [
+      { id: 'fc-1888', name: "flux capacitor", avg_rating: 4.5 },
+      { id: 'fc-2050', name: "power laces", avg_rating: 4.7 },
+      { id: 'fs-1987', name: "time circuits", avg_rating: 3.5 },
+      { id: 'ac-2000', name: "low voltage reactor", avg_rating: 3.9 },
+      { id: 'jj-1969', name: "warp equalizer", avg_rating: 5.0 }
+  ];
 
-    const products = [
-        { id: 1, name: "Baby Onesie - Newborn" },
-        { id: 2, name: "Baby Romper - 3-6 Months" },
-        { id: 3, name: "Baby Blanket - Soft Cotton" },
-        { id: 4, name: "Baby Hat - Wool Knit" },
-        { id: 5, name: "Baby Shoes - 6-12 Months" }
-    ];
+  const selectElement = document.getElementById('product-name');
+  if (selectElement) {
+      products.forEach(product => {
+          const option = document.createElement('option');
+          option.value = product.name;
+          option.textContent = product.name;
+          selectElement.appendChild(option);
+      });
+  }
 
-    products.forEach(product => {
-        const option = document.createElement('option');
-        option.value = product.id;  // Set the product ID as the value of the option
-        option.textContent = product.name;  // Set the product name as the display text
-        productSelect.appendChild(option);  // Append the option to the <select> element
-    });
+  if (localStorage.getItem('reviewCount') === null) {
+      localStorage.setItem('reviewCount', 0);
+  }
 
-    form.addEventListener('submit', function(event) {
-        let checkedOne = Array.prototype.slice.call(checkboxes).some(x => x.checked);
-        if (!checkedOne) {
-            event.preventDefault();
-            alert('Please check at least one feature.');
-        } else {
-            // Increment review count in localStorage
-            let reviewCount = localStorage.getItem('reviewCount');
-            if (!reviewCount) {
-                reviewCount = 0;
-            }
-            reviewCount = parseInt(reviewCount) + 1;
-            localStorage.setItem('reviewCount', reviewCount);
-        }
-    });
-
-    document.addEventListener("DOMContentLoaded", function() {
-        const currentYearSpan = document.getElementById("currentyear");
-        const lastModifiedSpan = document.getElementById("lastModified");
-    
-        const currentYear = new Date().getFullYear();
-        currentYearSpan.textContent = currentYear;
-    
-        
-        lastModifiedSpan.textContent = "Last Modification: " + document.lastModified;
-    });
-    
-})
+  const currentYear = new Date().getFullYear();
+  const lastModified = document.lastModified;
+  const copyrightYearElement = document.getElementById('currentyear');
+  const lastModifiedElement = document.getElementById('lastModified');
+  if (copyrightYearElement) {
+      copyrightYearElement.textContent = currentYear;
+  }
+  if (lastModifiedElement) {
+      lastModifiedElement.textContent = `Last update: ${lastModified}`;
+  }
+});

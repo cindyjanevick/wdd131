@@ -1,87 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Dynamic Web Fundamentals Forms</title>
-    <meta name="description" content="WDD 131 - Product Review Form - Cindy Jane Vick, Images of Temples"> 
-    <meta name="author" content ="Cindy Jane Vick">
+    <title>Product Review Form</title>
+    <meta name="description" content="Product Review Form">
+    <meta name="keywords" content="Product Review Form">
+    <meta name="author" content="Cindy Jane Vick">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Delius&family=Geist:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/form.css">
+    
+    <script src="scripts/form.js" defer></script>
 </head>
+
 <body>
     <header>
-        <h1>Product Review</h1>
+        <h1 class="nameHeader">Product Review</h1>
     </header>
+    <main>
+        <form method="get" action="review.html">
+            <label for="product-name">Product Name</label>
+            <select id="product-name" name="product-name" required aria-label="Product Name">
+                <option value="" disabled selected>Select a Product ...</option>
+            </select>
 
-    <input>
-        <form id="review-form" method="get" action="review.html">
-            <fieldset>
-                <legend>Product Review</legend>
-                <div class="form-item">
-                    <label for="product-select">Choose a product to review</label>
-                    <select id="product-select" name="Product" required>
-                        <option value="" disabled selected>Choose a breed...</option>
-                        <!-- Options will be populated by JavaScript -->
-                    </select>
+            <div class="form-group">
+                <label>Overall Rating</label>
+                <div class="rating-box" id="overall-rating">
+                    <p class="clasificacion">
+                        <input id="radio1" type="radio" name="stars" value="5" required><label for="radio1">&#9733;</label>
+                        <input id="radio2" type="radio" name="stars" value="4" required><label for="radio2">&#9733;</label>
+                        <input id="radio3" type="radio" name="stars" value="3" required><label for="radio3">&#9733;</label>
+                        <input id="radio4" type="radio" name="stars" value="2" required><label for="radio4">&#9733;</label>
+                        <input id="radio5" type="radio" name="stars" value="1" required><label for="radio5">&#9733;</label>
+                    </p>
                 </div>
-            </fieldset>    
-        </form>    
-            
-
-            <h2>Overall Rating</h2>
-            <div class="stars">
-                <label for="rating1">☆<br><input type="radio" id="rating1" name="stars" value="1 star" required></label>
-                <label for="rating2">☆☆<br><input type="radio" id="rating2" name="stars" value="2 star" required></label>
-                <label for="rating3">☆☆☆<br><input type="radio" id="rating3" name="stars" value="3 star" required></label>
-                <label for="rating4">☆☆☆☆<br><input type="radio" id="rating4" name="stars" value="4 star" required></label>
-                <label for="rating5">☆☆☆☆☆<br><input type="radio" id="rating5" name="stars" value="5 star" required></label>
             </div>
 
-            <div class="purchase">
-                <label for="purchasedate">Date of Purchase</label>
-                <input type="date" id="purchasedate" name="Date of Purchase" required>
+            <div class="form-group">
+                <label for="installation-date">Date of Installation</label>
+                <input type="date" id="installation-date" name="installation-date" required aria-label="Installation Date">
             </div>
 
-            <div class="features">
-                <label>Which features did you like the most in the product?</label>
-                <p>(Check all that apply)?</p>
+            <fieldset class="form-group">
+                <legend>Which features did you find useful in the product? (Check all that apply)</legend>
+                <div class="features">
+                    <input type="checkbox" id="durability" name="features" value="durability">
+                    <label for="durability">Durability</label>
+                </div>
+                <div class="features">
+                    <input type="checkbox" id="ease-of-use" name="features" value="ease-of-use">
+                    <label for="ease-of-use">Ease of Use</label>
+                </div>
+                <div class="features">
+                    <input type="checkbox" id="performance" name="features" value="comfort">
+                    <label for="comfort">Comfort</label>
+                </div>
+                <div class="features">
+                    <input type="checkbox" id="design" name="features" value="design">
+                    <label for="design">Design</label>
+                </div>
+            </fieldset>
 
-                <input type="checkbox" id="feature1" name="durability" value="">
-                <label for="feature1">Durability</label><br>
 
-                <input type="checkbox" id="feature2" name="ease of use" value="">
-                <label for="feature2">Ease of Use</label><br>
-
-                <input type="checkbox" id="feature3" name="fabric texture" value="">
-                <label for="feature3">Fabric Quality</label><br>
-                
-                <input type="checkbox" id="feature4" name="design" value="">
-                <label for="feature4">Design</label><br>
-
-                <input type="checkbox" id="feature5" name="comfort" value="">
-                <label for="feature5">Comfort and Fit</label><br>
+            <div class="form-group">
+                <label for="written-review">Written Review (Optional)</label>
+                <textarea id="written-review" name="written-review" aria-label="Written Review"></textarea>
             </div>
 
-            <div class="textreview">
-                <label for="review">Written Review (optional)</label>
-                <textarea id="review" name="review" rows="4" placeholder="Write the review here"></textarea>
-
-                <label for="name">Your Name (optional)</label>
-                <input type="text" id="name" name="name" value="">
+            <div class="form-group">
+                <label for="user-name">Your Name (Optional)</label>
+                <input type="text" id="user-name" name="user-name" aria-label="Your Name">
             </div>
 
-            <input type="submit" name="submit" id="submit" value="Post Review">
-        
-    
+            <input type="submit" value="Post Review">
+        </form>
     </main>
-       
     <footer>
-        <p>&copy;<span id="currentyear"></span> &#127803; Cindy Jane Vick &#127803; Japan </p>
+        <p>&copy;<span id="currentyear"></span> &#127803; Cindy Jane Vick &#127803; Japan</p>
         <p id="lastModified"></p>
     </footer>
-    <script src="scripts/form.js" defer> </script>
 </body>
+
 </html>
