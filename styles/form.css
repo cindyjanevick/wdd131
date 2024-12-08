@@ -14,7 +14,7 @@
     --accent3-color-platinum: #E0E1DD;
 
     /* Font settings */
-    --font-family: 'Delius',sans-serif;
+    --font-family: 'Delius', sans-serif;
     --font-weight-regular: 400;
     --font-weight-thin: 100;
 
@@ -32,7 +32,7 @@
     --nav-hover-background-color: var(--primary-color-rich-black);
 }
 
-
+/* General reset */
 * {
     margin: 0;
     padding: 0;
@@ -40,7 +40,7 @@
 }
 
 body {
-    /* font-family: var(--font-family); */
+    font-family: var(--font-family);
     font-weight: var(--font-weight-regular);
     background-color: var(--accent3-color-platinum);
     color: var(--text-color);
@@ -154,8 +154,7 @@ textarea {
 .rating-box label {
     color: var(--accent2-color-silverlake-blue);
     font-size: 2rem;
-    border-radius: 1px ;
-    border: 1px solid var(--primary-color-rich-black)
+    border-radius: 1px solid var(--primary-color-rich-black);
 }
 
 .rating-box .clasificacion {
