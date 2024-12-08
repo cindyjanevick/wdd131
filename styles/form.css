@@ -40,7 +40,7 @@
 }
 
 body {
-    font-family: var(--font-family);
+    /* font-family: var(--font-family); */
     font-weight: var(--font-weight-regular);
     background-color: var(--accent3-color-platinum);
     color: var(--text-color);
