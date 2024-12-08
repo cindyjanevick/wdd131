@@ -1,6 +1,6 @@
 :root {
     /* Palette colors */
-    --primary-color: #4a4e69;
+    --primary-color: #694a61;
     --secondary-color: #9a8c98;
     --background-color: #f2e9e4;
     --text-color:#22223b;                                                                                                                                                                                                                                                                         
@@ -152,7 +152,7 @@ textarea {
 }
 
 .rating-box label {
-    color: var(--accent2-color-silverlake-blue);
+    color: var(--accent2-color-silverlake-pink);
     font-size: 2rem;
     border-radius: 1px ;
 }
