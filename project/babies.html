@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Gallery Album</title>
+    <meta name="description" content="Baby Gallery Album of Abigail and Lucas">
+    <meta name="author" content="Your Name">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/babies.css">
+</head>
+
+<body>
+    <header>
+        <h1>Baby Gallery Album</h1>
+        <a href="#" id="menu"></a>
+        <nav>
+            <ul class="navigation">
+                <li><a href="babies.html" id="active">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="outfit-gallery.html">Outfit & Fashion Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <img src="images/banner2.png" alt="Abigail and Lucas" loading="lazy" width="100%" height="auto">
+    </section>
+
+    <main>
+        <section class="welcome-section">
+            <h1>Welcome to Our Twins' Album! 👶👶</h1>
+            <p>Follow the journey of our twins as they grow, with monthly highlights and special moments captured just for you!</p>
+        </section>
+
+        <section class="baby-profiles">
+            <div class="baby-box">
+                <a href="gallery.html">
+                    <figure>
+                        <img src="images/abby.webp" alt="Abigail" loading="lazy" width="250" height="250">
+                        <figcaption>Abigail</figcaption>
+                    </figure>
+                </a>
+                <div class="baby-info">
+                    <p><strong>Full Name:</strong> Abigail Mae</p>
+                    <p><strong>Weight:</strong> 5 lbs 15 oz</p>
+                    <p><strong>Size:</strong> 19 inches</p>
+                    <p><strong>Birthdate:</strong> June 22, 2024</p>
+                    <p><strong>Age:</strong> <span id="abby-age"></span></p>
+                </div>
+            </div>
+
+            <div class="baby-box">
+                <a href="gallery.html">
+                    <figure>
+                        <img src="images/lucas.webp" alt="Lucas" loading="lazy" width="250" height="250">
+                        <figcaption>Lucas</figcaption>
+                    </figure>
+                </a>
+                <div class="baby-info">
+                    <p><strong>Full Name:</strong> Lucas Wyatt</p>
+                    <p><strong>Weight:</strong> 6 lbs 8 oz</p>
+                    <p><strong>Size:</strong> 19.25 inches</p>
+                    <p><strong>Birthdate:</strong> June 22, 2024</p>
+                    <p><strong>Age:</strong> <span id="lucas-age"></span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> &#127803; Baby Album &#127803;</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/babies.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+:root {
+    --primary-color: #008B76;
+    --secondary-color: #F49097;
+    --accent1-color: #F5E960;
+    --accent2-color: #1e1e24;
+    --heading-font: "Poppins", sans-serif;
+    --paragraph-font: "Delius", sans-serif;
+    --navigation-font: "Geist", sans-serif;
+    --footer-font: "Delius", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    background-color: var(--secondary-color);
+    color: var(--accent2-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures title and nav are aligned in a row */
+    padding: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    color: var(--accent1-color);
+    margin: 0;
+}
+
+.navigation {
+    list-style: none;
+    background-color: var(--primary-color);
+    flex-wrap: wrap;
+    display: none; /* Hidden by default */
+    position: absolute; /* Overlapping the content in mobile */
+    top: 4rem; /* Ensures it doesn't overlap the title */
+    right: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.navigation.open {
+    display: block; /* Show navigation when open */
+}
+
+.navigation a {
+    display: block;
+    color: var(--accent1-color);
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem;
+    transition: all 0.4s;
+}
+
+a, figcaption, p {
+    font-family: var(--navigation-font);
+    font-style: normal;
+}
+
+nav a:hover, nav a:focus {
+    background-color: var(--accent1-color);
+    color: var(--accent2-color);
+    font-size: 1.6rem;
+}
+
+#active {
+    color: var(--white);
+    text-decoration: overline;
+    font-weight: 700;
+}
+
+#menu {
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    color: var(--accent1-color);
+    display: block;
+}
+
+#menu::before {
+    content: "☰"; /* Default hamburger icon */
+}
+
+#menu.open::before {
+    content: "X"; /* X when opened */
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.welcome-section {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--accent2-color);
+    color: white;
+}
+
+.welcome-section h1 {
+    font-family: var(--heading-font);
+    color: var(--accent1-color);
+}
+
+.welcome-section p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+.baby-profiles {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.baby-box {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.baby-info {
+    text-align: justify;
+}
+
+.baby-box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.baby-box:hover img {
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    font-family: var(--footer-font);
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        display: none;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        width: 100%;
+        padding: 1rem;
+        position: absolute;
+        top: 4rem; /* Position below the header */
+        right: 0;
+        z-index: 1;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    .navigation a {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .open .navigation {
+        display: block; /* Show navigation when open */
+    }
+}
+
+@media (min-width: 40em) {
+    header {
+        display: flex;
+        align-items: center; /* Align the title and navigation in one row */
+        justify-content: space-between;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative; /* Keep the nav aligned */
+        top: 0; /* Remove any additional space */
+    }
+
+    .navigation a {
+        display: block;
+    }
+
+    #menu {
+        display: none; /* Hide the hamburger menu in desktop view */
+    }
+
+    nav a:hover, nav a:focus {
+        color: var(--secondary-color);
+        font-size: 1.6rem;
+    }
+}
