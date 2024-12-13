@@ -1,4 +1,4 @@
-:root {
+:root{
     --primary-color: #008B76;
     --secondary-color: #F49097;
     --accent1-color: #F5E960;
@@ -9,53 +9,296 @@
     --footer-font: "Delius", sans-serif;
 }
 
-/* Global Styles */
-body {
-    font-family: var(--paragraph-font);
+* {
     margin: 0;
-    padding: 0;
-    background-color: var(--accent2-color);
-    color: var(--accent1-color);
+    /* padding: 0; */
+    box-sizing: border-box;
+    height: auto;
+}
+
+h1, h2 {
+    font-family: "Delius", cursive;
+    /* font-weight: 400; */
+    font-style: normal;
 }
 
 header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: var(--primary-color);
+    background-color:var(--primary-color) ;
     padding: 1rem;
-    color: var(--accent1-color);
 }
 
-header h1 {
-    font-family: var(--heading-font);
+h1 {
+    align-self: center;
+    color: var(--accent2-color);
+    font-weight: 900;
+    text-align: left;
+    letter-spacing: 0.1rem;
+    margin-top: 0.5rem;
+    font-size: 2.5rem;
 }
 
-button {
-    background-color: var(--secondary-color);
-    border: none;
-    padding: 0.5rem;
-    cursor: pointer;
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 900;
+    padding: 1rem;
+    margin-top:  0.5rem;
+}
+
+a, figcaption, p {
+    font-family: "Geist", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color:var(--primary-color);
+    flex-wrap: wrap;
 }
 
 .navigation a {
+    display: none;
     color: var(--accent1-color);
+    font-size: 1.5rem;
+    text-align: center;
     text-decoration: none;
-    padding: 0.5rem;
+    padding: 1rem;
+    transition: all 0.4s;
 }
 
-.navigation a:hover {
+#active {
+    color: var(--white);
+    text-decoration: overline;
+    font-weight: 700;
+}
+
+nav a:hover, nav a:focus {
     color: var(--secondary-color);
+    font-size: 1.6rem;
+
+}   
+
+#menu {
+    /* display: block; */
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    color: var(---accent1-color);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content:"☰";
+}
+
+#menu.open::before {
+    content: "X";
+}
+
+.open a {
+    display: block;
+}
+
+.gallery-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    width: 100%;
+    margin: 0 auto;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* max-width: 100%; */
+    /* margin: 0 auto;
+    padding: 2rem 0 2rem; */ 
+}
+
+.container-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+    width: 100%;
+    
+}
+
+.container-images section {
+    background-color: #fff;
+    /* border-radius: 0.75rem;
+    box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.3); */
+    padding: 1rem;
+    width: 100%;
+    max-width: 35rem; /* Increased max-width to accommodate larger content */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.5rem;
+}
+
+
+
+.container-images img {
+    overflow: clip;
+    width: 100%;
+    max-height: 225px;
+    margin-top: 1rem;
+    border-radius: .75rem;
+    flex: 1 1 100%;
+}
+
+section h3{
+    font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+
+}
+
+section p{
+    padding: 0.25rem;
+}
+
+span.label {
+    font-weight: 900;
+}
+
+/* img {
+    overflow: clip;
+    overflow-clip-margin: content-box 1em;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.5rem;
+} */
+
+figcaption {
+    margin-top: 0.2rem;
+    text-align: center;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.filters select {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-card {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.image-card h4 {
+    margin: 10px 0;
+    font-family: var(--heading-font);
+    font-size: 20px;
+}
+
+.image-card p {
+    font-family: var(--paragraph-font);
+    font-size: 18px;
+    color: var(--accent2-color);
 }
 
 footer {
-    background-color: var(--primary-color);
+    background-color: var( --primary-color);
+    color: #fff;
     text-align: center;
-    padding: 1rem;
-    color: var(--accent1-color);
-    font-family: var(--footer-font);
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid var( --primary-color);
+    border-bottom: 1px solid var( --primary-color);
+    margin-top: 2rem;
+} 
+
+footer p {
+    /* padding-top: 1rem; */
+    font-size: 1.2rem;
+    color: #fff;
+    padding: 0.1rem;
+}
+#lastModified{
+    color:var(--bright-yellow);}
+
+    /* Media Query for wider than mobile viewports.*/
+@media (min-width: 40em) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .navigation a {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .gallery-main {
+        max-width: 1440px;
+        flex: 1 1 100%;
+    }
+    
+    .container-images {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        gap: 1rem;
+        justify-items: center;
+        flex: 1 1 100%;
+    }
+
+     
+     footer p {
+        font-family:  "Delius", cursive;
+        font-size: 1.2rem;
+        padding: .2rem;
+        margin: 0.5rem 0;
+    }
+    
+    
 }
 
-footer span {
-    color: var(--secondary-color);
-}
