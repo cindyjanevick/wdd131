@@ -1,0 +1,61 @@
+:root {
+    --primary-color: #008B76;
+    --secondary-color: #F49097;
+    --accent1-color: #F5E960;
+    --accent2-color: #1e1e24;
+    --heading-font: "Poppins", sans-serif;
+    --paragraph-font: "Delius", sans-serif;
+    --navigation-font: "Geist", sans-serif;
+    --footer-font: "Delius", sans-serif;
+}
+
+/* Global Styles */
+body {
+    font-family: var(--paragraph-font);
+    margin: 0;
+    padding: 0;
+    background-color: var(--accent2-color);
+    color: var(--accent1-color);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    color: var(--accent1-color);
+}
+
+header h1 {
+    font-family: var(--heading-font);
+}
+
+button {
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.navigation a {
+    color: var(--accent1-color);
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.navigation a:hover {
+    color: var(--secondary-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 1rem;
+    color: var(--accent1-color);
+    font-family: var(--footer-font);
+}
+
+footer span {
+    color: var(--secondary-color);
+}
