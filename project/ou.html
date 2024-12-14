@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals Temple Album</title>
+    <meta name="description" content="Baby Gallery page"> 
+    <meta name="author" content ="Cindy Jane Vick">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/ou.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Fashion Gallery</h1>
+        <a href="#" id="menu"></a>
+        <nav>
+            <ul class="navigation">
+                <li><a href="babies.html" >Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="ou.html "id="active">Outfits & Fashion Gallery</a></li>
+              
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="filters">
+            <select id="ageFilter">
+                <option value="">Age</option>
+                <option value="0">0 months</option>
+                <option value="1">1 month</option>
+                <option value="2">2 months</option>
+                <option value="3">3 months</option>
+                <option value="4">4 months</option>
+                <option value="5">5 months</option>
+                <option value="6">6 months</option>
+                <option value="7">7 months</option>
+                <option value="8">8 months</option>
+                <option value="9">9 months</option>
+                <option value="10">10 months</option>
+                <option value="11">11 months</option>
+                <option value="12">12 months</option>
+            </select>
+
+            <select id="locationFilter">
+                <option value="">Location</option>
+                <option value="hawaii">Hawaii</option>
+                <option value="misawa">Misawa</option>
+            </select>
+
+            <select id="fashionFilter">
+                <option value="">Fashion Type</option>
+                <option value="casual">Casual</option>
+                <option value="formal">Formal</option>
+            </select>
+
+            <select id="babyNameFilter">
+                <option value="All">All</option>
+                <option value="Abby">Abby</option>
+                <option value="Lucas">Lucas</option>
+                <option value="Abby&Lucas">Abby & Lucas</option>
+            </select>
+
+            <button class="filter-btn" onclick="filterImages()">Apply Filters</button>
+        </div>
+
+        <!-- Outfit Cards -->
+        <div id="outfit-cards-container"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy;<span id="currentyear"></span> &#9962; Cindy Jane Vick &#9962; Japan </p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/ou.js"></script>
+</body>
+</html>

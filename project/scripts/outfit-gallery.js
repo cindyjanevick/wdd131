@@ -74,6 +74,33 @@ const outfitData = [
         fashionType: "Formal",
         babyName: "Abby&Lucas"
     },
+    {
+        image: "images/yummz.jpg",
+        caption: "Sauces",
+        location: "Misawa",
+        age: "2 months",
+        season: "Summer",
+        fashionType: "Casual",
+        babyName: "Abby&Lucas"
+    },
+    {
+        image: "images/abbyyellow.jpg",
+        caption: "Princess in yellow",
+        location: "Misawa",
+        age: "2 months",
+        season: "Summer",
+        fashionType: "Casual",
+        babyName: "Abby"
+    },
+    {
+        image: "images/sportyboy.jpg",
+        caption: "Sport outfit",
+        location: "Misawa",
+        age: "2 months",
+        season: "Summer",
+        fashionType: "Casual",
+        babyName: "Abby"
+    },
     // Add at least 24 entries here...
 ];
 

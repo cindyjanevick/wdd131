@@ -1,34 +1,187 @@
-/* Add your background image and style */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: 'Poppins', sans-serif; /* Heading font from your project */
-    background-image: url('../images/hero-large-comingsoon.webp'); /* Replace with your actual image path */
-    background-size: cover;
-    background-position: center;
+:root {
+    --primary-color: #008B76;
+    --secondary-color: #F49097;
+    --accent1-color: #F5E960;
+    --accent2-color: #1e1e24;
+    --heading-font: "Poppins", sans-serif;
+    --paragraph-font: "Delius", sans-serif;
+    --navigation-font: "Geist", sans-serif;
+    --footer-font: "Delius", sans-serif;
 }
 
-.countdown-container {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-    padding: 2rem;
-    border-radius: 10px;
-    margin-top: 30rem;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    background-color: var(--secondary-color);
+    color: var(--accent2-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    z-index: 2;
 }
 
 h1 {
-    color: #008B76; /* Primary color */
-    font-size: 3rem;
-    margin-bottom: 2rem;
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    color: var(--accent1-color);
+    margin: 0;
 }
-header h1{
-    margin-bottom:20rem;
+/* .countdown-container h1{
+    color:white;
+} */
+
+.navigation {
+    list-style: none;
+    background-color: var(--primary-color);
+    display: none;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    width: 100%;
+}
+
+.navigation.open {
+    display: block;
+}
+
+.navigation a {
+    display: block;
+    color: var(--accent1-color);
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+#menu {
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    color: var(--accent1-color);
+    display: block;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "X";
+}
+#active {
+    color: var(--white);
+    text-decoration: overline;
+    font-weight: 700;
+}
+.countdown-container {
+    display: block; /* Change from flex to block */
+    text-align: center;
+    background-color: var(--secondary-color); /* Fixing typo 'colorcolor' */
+    color: var(--accent2-color);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-top: 10%; /* Add margin-top to position the countdown vertically */
+}
+
+.countdown-container h1 {
+    color: white; /* Ensure the countdown title is white */
+    font-size: 2.5rem;
+    margin-bottom: 1rem; /* Add some spacing below the title */
 }
 
 #countdown {
-    font-size: 2rem;
-    color: #1e1e24; /* Accent 2 color */
+    font-size: 3rem;
+    font-family: var(--heading-font);
+    font-weight: bold;
+    background-color: var(--accent1-color);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    font-family: var(--footer-font);
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        width: 100%;
+        padding: 1rem;
+        position: absolute;
+        top: 4rem;
+        right: 0;
+        z-index: 1;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    .navigation a {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .open .navigation {
+        display: block;
+    }
+}
+
+@media (min-width: 40em) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+        top: 0;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    nav a:hover, nav a:focus {
+        color: var(--secondary-color);
+    }
 }

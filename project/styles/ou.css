@@ -1,0 +1,229 @@
+:root {
+    --primary-color: #008B76;
+    --secondary-color: #F49097;
+    --accent1-color: #F5E960;
+    --accent2-color: #1e1e24;
+    --heading-font: "Poppins", sans-serif;
+    --paragraph-font: "Delius", sans-serif;
+    --navigation-font: "Geist", sans-serif;
+    --footer-font: "Delius", sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: block;
+    font-family: var(--paragraph-font);
+    font-style: normal;
+    margin: 0 auto;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    align-self: center;
+    color: var(--accent1-color);
+    font-weight: 900;
+    text-align: left;
+    letter-spacing: 0.1rem;
+    margin-top: 0.5rem;
+    font-size: 2.8rem;
+}
+
+/* Hamburger Menu */
+#menu {
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    color: var(--accent1-color);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    display: none; /* Hide by default */
+}
+
+#menu::before {
+    content: "☰"; /* Hamburger icon */
+}
+
+#menu.open::before {
+    content: "X"; /* Change to X when open */
+}
+
+/* Navigation Styles */
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 1rem;
+}
+
+nav a {
+    /* color: white; */
+    text-decoration: none;
+    font-family: var(--navigation-font);
+    padding: 0.5rem;
+    font-size: 1.7rem;
+} 
+
+nav a:hover {
+    background: var(--secondary-color);
+    color: var(--accent1-color);
+} 
+#active {
+    color: var(--white);
+    text-decoration: overline;
+    font-weight: 700;
+}
+
+nav a:focus {
+    color: var(--accent1-color);
+    
+    font-size: 1.6rem;
+
+}  
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 3rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+footer p {
+    font-size: 1.7rem;
+    color: #fff;
+    
+
+}
+#lastModified{
+    color:var(--accent1-color);}
+.filters {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filters select,
+.filters button {
+    padding: 0.5rem;
+    margin-right: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#outfit-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; /* Increase gap between cards */
+    margin-top: 1rem;
+}
+
+.outfit-card {
+    border: 1px solid #ccc;
+    padding: 1.5rem; /* Increase padding to make boxes feel fuller */
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.outfit-card img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;  /* Increase max width for desktop */
+    margin-bottom: 1rem;
+    display: block;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.outfit-card h2 {
+    font-size: 1.2rem;
+    color: rgb(46, 84, 107);
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.outfit-card .info {
+    font-size: 0.9rem;
+    color: #333;
+    text-align: center;
+}
+
+/* Mobile and Tablet Responsive Styling */
+@media (max-width: 937px) {
+    /* Show hamburger menu */
+    #menu {
+        display: block; /* Show hamburger on smaller screens */
+    }
+
+    /* Hide navigation links initially */
+    .navigation {
+        display: none;
+    }
+
+    /* Show menu when open */
+    .navigation.open {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: var(--primary-color);
+        width: 100%;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    /* Outfit grid layout for small screens */
+    #outfit-cards-container {
+        grid-template-columns: repeat(2, 1fr);  /* Use two columns on smaller screens */
+    }
+
+    .outfit-card img {
+        max-width: 250px;  /* Larger image size for tablet view */
+    }
+}
+
+@media (max-width: 600px) {
+    
+    #outfit-cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .outfit-card img {
+        max-width: 200px;  /* Larger image size for mobile view */
+    }
+}
+
+/* Remove hamburger on larger screens */
+@media (min-width: 938px) {
+    #menu {
+        display: none; /* Hide hamburger menu on large screens */
+    }
+}
