@@ -1,7 +1,7 @@
 const outfitData = [
     
         {
-            image: "images/4months (1).jpg",
+            image: "images/4months.webp",
             caption: "Outfit 1",
             location: "Misawa",
             age: "4 ",
@@ -11,7 +11,7 @@ const outfitData = [
             alt: "Abby and Lucas wearing a casual fall outfit"
         },
         {
-            image: "images/smileyboy.jpg",
+            image: "images/smileyboy.wepb",
             caption: "Smiley Boy",
             location: "Misawa",
             age: "2 ",
@@ -21,7 +21,7 @@ const outfitData = [
             alt: "Lucas Smiling to the camera"
         },
         {
-            image: "images/princess2.jpg",
+            image: "images/princess2.webp",
             caption: "Little princess",
             location: "Misawa",
             age: "2 ",
@@ -31,7 +31,7 @@ const outfitData = [
             alt: "Abby chilling in pink"
         },
         {
-            image: "images/formal1.jpg",
+            image: "images/formal1.webp",
             caption: "Ready to party",
             location: "Misawa",
             age: "4 ",
@@ -41,7 +41,7 @@ const outfitData = [
             alt: "Abby and Lucas wearing a formal white outfit"
         },
         {
-            image: "images/lucasnewborn.jpg",
+            image: "images/lucasnewborn.webp",
             caption: "Newborn Lucas",
             location: "Hawaii",
             age: "0",
@@ -51,7 +51,7 @@ const outfitData = [
             alt: "Just out of the womb Lucas"
         },
         {
-            image: "images/abbynewborn.jpg",
+            image: "images/abbynewborn.webp",
             caption: "Newborn Abby",
             location: "Hawaii",
             age: "0",
@@ -61,7 +61,7 @@ const outfitData = [
             alt: "Just out of the womb Abby"
         },
         {
-            image: "images/4thjuly.jpg",
+            image: "images/4thjuly.webp",
             caption: "Independence Day",
             location: "Hawaii",
             age: "0 ",
@@ -71,7 +71,7 @@ const outfitData = [
             alt: "Celebration 4th of July"
         },
         {
-            image: "images/yummz.jpg",
+            image: "images/yummz.webp",
             caption: "Sauces",
             location: "Misawa",
             age: "2 ",
@@ -81,7 +81,7 @@ const outfitData = [
             alt: "Mustard and Ketchup"
         },
         {
-            image: "images/abbyyellow.jpg",
+            image: "images/abbyyellow.webp",
             caption: "Princess in yellow",
             location: "Misawa",
             age: "2 ",
@@ -91,7 +91,7 @@ const outfitData = [
             alt: "Abby chilling in yellow"
         },
         {
-            image: "images/sportyboy.jpg",
+            image: "images/sportyboy.webp",
             caption: "Sport outfit",
             location: "Misawa",
             age: "2 ",
