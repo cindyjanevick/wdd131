@@ -68,6 +68,25 @@
 
         <!-- Outfit Cards -->
         <div id="outfit-cards-container"></div>
+
+
+        
+        <h2>Leave Us Your Thoughts</h2>
+        <form id="feedbackForm" action="submit_form.php" method="POST">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required><br><br>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required><br><br>
+
+            <label for="comment">Your Comment:</label>
+            <textarea id="comment" name="comment" rows="5" required></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+        
+        <p id="thankYouMessage" style="display:none;">Thank you for your thoughts!</p>
+        
     </main>
 
     <!-- Footer -->

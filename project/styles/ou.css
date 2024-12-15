@@ -169,6 +169,63 @@ footer p {
     color: #333;
     text-align: center;
 }
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px; /* Add more space above the title */
+    margin-bottom: 20px; /* Add more space below the title */
+}
+
+form {
+    font-family: 'Poppins', sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f5e960;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #008B76;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #006c5b;
+}
+
+#thankYouMessage {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
 
 /* Mobile and Tablet Responsive Styling */
 @media (max-width: 937px) {

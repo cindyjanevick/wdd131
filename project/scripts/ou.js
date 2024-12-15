@@ -10,16 +10,7 @@ const outfitData = [
             babyName: "Abby&Lucas",
             alt: "Abby and Lucas wearing a casual fall outfit"
         },
-        {
-            image: "images/smileyboy.wepb",
-            caption: "Smiley Boy",
-            location: "Misawa",
-            age: "2 ",
-            season: "Summer",
-            fashionType: "Casual",
-            babyName: "Lucas",
-            alt: "Lucas Smiling to the camera"
-        },
+        
         {
             image: "images/princess2.webp",
             caption: "Little princess",
@@ -174,3 +165,13 @@ menuButton.addEventListener("click", function() {
     navigation.classList.toggle("open");  // Toggle the 'open' class on the navigation
     menuButton.classList.toggle("open");  // Toggle the 'open' class on the menu button to change the icon to 'X'
 });
+
+const form = document.getElementById('feedbackForm');
+        const thankYouMessage = document.getElementById('thankYouMessage');
+
+        // Handle form submission
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent the form from submitting normally
+            form.reset();  // Reset the form fields
+            thankYouMessage.style.display = 'block';  // Show the thank you message
+        });
