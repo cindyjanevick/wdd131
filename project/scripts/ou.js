@@ -7,7 +7,8 @@ const outfitData = [
             age: "4 ",
             season: "Fall",
             fashionType: "Casual",
-            babyName: "Abby&Lucas"
+            babyName: "Abby&Lucas",
+            alt: "Abby and Lucas wearing a casual fall outfit"
         },
         {
             image: "images/smileyboy.jpg",
@@ -16,7 +17,8 @@ const outfitData = [
             age: "2 ",
             season: "Summer",
             fashionType: "Casual",
-            babyName: "Lucas"
+            babyName: "Lucas",
+            alt: "Lucas Smiling to the camera"
         },
         {
             image: "images/princess2.jpg",
@@ -25,7 +27,8 @@ const outfitData = [
             age: "2 ",
             season: "Summer",
             fashionType: "Casual",
-            babyName: "Abby"
+            babyName: "Abby",
+            alt: "Abby chilling in pink"
         },
         {
             image: "images/formal1.jpg",
@@ -34,7 +37,8 @@ const outfitData = [
             age: "4 ",
             season: "Fall",
             fashionType: "Formal",
-            babyName: "Abby&Lucas"
+            babyName: "Abby&Lucas",
+            alt: "Abby and Lucas wearing a formal white outfit"
         },
         {
             image: "images/lucasnewborn.jpg",
@@ -43,7 +47,8 @@ const outfitData = [
             age: "0",
             season: "Summer",
             fashionType: "Casual",
-            babyName: "Lucas"
+            babyName: "Lucas",
+            alt: "Just out of the womb Lucas"
         },
         {
             image: "images/abbynewborn.jpg",
@@ -52,7 +57,8 @@ const outfitData = [
             age: "0",
             season: "Summer",
             fashionType: "Casual",
-            babyName: "Abby"
+            babyName: "Abby",
+            alt: "Just out of the womb Abby"
         },
         {
             image: "images/4thjuly.jpg",
@@ -61,7 +67,8 @@ const outfitData = [
             age: "0 ",
             season: "Summer",
             fashionType: "Formal",
-            babyName: "Abby&Lucas"
+            babyName: "Abby&Lucas",
+            alt: "Celebration 4th of July"
         },
         {
             image: "images/yummz.jpg",
@@ -70,7 +77,8 @@ const outfitData = [
             age: "2 ",
             season: "Summer",
             fashionType: "Casual",
-            babyName: "Abby&Lucas"
+            babyName: "Abby&Lucas",
+            alt: "Mustard and Ketchup"
         },
         {
             image: "images/abbyyellow.jpg",
@@ -79,7 +87,8 @@ const outfitData = [
             age: "2 ",
             season: "Summer",
             fashionType: "Casual",
-            babyName: "Abby"
+            babyName: "Abby",
+            alt: "Abby chilling in yellow"
         },
         {
             image: "images/sportyboy.jpg",
@@ -88,7 +97,8 @@ const outfitData = [
             age: "2 ",
             season: "Summer",
             fashionType: "Casual",
-            babyName: "Abby"
+            babyName: "Abby",
+            alt: "Lucas in a sport outfit"
         },
         // Add at least 24 entries here...
     
