@@ -109,7 +109,7 @@ footer {
 }
 footer p {
     font-size: 1.7rem;
-    color: #fff;
+    color:var(--accent2-color);
     
 
 }
