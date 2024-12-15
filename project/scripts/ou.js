@@ -1,162 +1,162 @@
+// Outfit data
 const outfitData = [
-    
-        {
-            image: "images/4months.webp",
-            caption: "Outfit 1",
-            location: "Misawa",
-            age: "4 ",
-            season: "Fall",
-            fashionType: "Casual",
-            babyName: "Abby&Lucas",
-            alt: "Abby and Lucas wearing a casual fall outfit"
-        },
-        
-        {
-            image: "images/princess2.webp",
-            caption: "Little princess",
-            location: "Misawa",
-            age: "2 ",
-            season: "Summer",
-            fashionType: "Casual",
-            babyName: "Abby",
-            alt: "Abby chilling in pink"
-        },
-        {
-            image: "images/formal1.webp",
-            caption: "Ready to party",
-            location: "Misawa",
-            age: "4 ",
-            season: "Fall",
-            fashionType: "Formal",
-            babyName: "Abby&Lucas",
-            alt: "Abby and Lucas wearing a formal white outfit"
-        },
-        {
-            image: "images/lucasnewborn.webp",
-            caption: "Newborn Lucas",
-            location: "Hawaii",
-            age: "0",
-            season: "Summer",
-            fashionType: "Casual",
-            babyName: "Lucas",
-            alt: "Just out of the womb Lucas"
-        },
-        {
-            image: "images/abbynewborn.webp",
-            caption: "Newborn Abby",
-            location: "Hawaii",
-            age: "0",
-            season: "Summer",
-            fashionType: "Casual",
-            babyName: "Abby",
-            alt: "Just out of the womb Abby"
-        },
-        {
-            image: "images/4thjuly.webp",
-            caption: "Independence Day",
-            location: "Hawaii",
-            age: "0 ",
-            season: "Summer",
-            fashionType: "Formal",
-            babyName: "Abby&Lucas",
-            alt: "Celebration 4th of July"
-        },
-        {
-            image: "images/yummz.webp",
-            caption: "Sauces",
-            location: "Misawa",
-            age: "2 ",
-            season: "Summer",
-            fashionType: "Casual",
-            babyName: "Abby&Lucas",
-            alt: "Mustard and Ketchup"
-        },
-        {
-            image: "images/abbyyellow.webp",
-            caption: "Princess in yellow",
-            location: "Misawa",
-            age: "2 ",
-            season: "Summer",
-            fashionType: "Casual",
-            babyName: "Abby",
-            alt: "Abby chilling in yellow"
-        },
-        {
-            image: "images/sportyboy.webp",
-            caption: "Sport outfit",
-            location: "Misawa",
-            age: "2 ",
-            season: "Summer",
-            fashionType: "Casual",
-            babyName: "Abby",
-            alt: "Lucas in a sport outfit"
-        },
-        // Add at least 24 entries here...
-    
+    {
+        image: "images/4months.webp",
+        caption: "Outfit 1",
+        location: "Misawa",
+        age: "4",
+        season: "Fall",
+        fashionType: "Casual",
+        babyName: "Abby&Lucas",
+        alt: "Abby and Lucas wearing a casual fall outfit"
+    },
+    {
+        image: "images/princess3.webp",
+        caption: "Little princess",
+        location: "Misawa",
+        age: "2",
+        season: "Summer",
+        fashionType: "Casual",
+        babyName: "Abby",
+        alt: "Abby chilling in pink"
+    },
+    {
+        image: "images/formal1.webp",
+        caption: "Ready to party",
+        location: "Misawa",
+        age: "4",
+        season: "Fall",
+        fashionType: "Formal",
+        babyName: "Abby&Lucas",
+        alt: "Abby and Lucas wearing a formal white outfit"
+    },
+    {
+        image: "images/lucasnewborn.webp",
+        caption: "Newborn Lucas",
+        location: "Hawaii",
+        age: "0",
+        season: "Summer",
+        fashionType: "Casual",
+        babyName: "Lucas",
+        alt: "Just out of the womb Lucas"
+    },
+    {
+        image: "images/abbynewborn.webp",
+        caption: "Newborn Abby",
+        location: "Hawaii",
+        age: "0",
+        season: "Summer",
+        fashionType: "Casual",
+        babyName: "Abby",
+        alt: "Just out of the womb Abby"
+    },
+    {
+        image: "images/4thjuly.webp",
+        caption: "Independence Day",
+        location: "Hawaii",
+        age: "0",
+        season: "Summer",
+        fashionType: "Formal",
+        babyName: "Abby&Lucas",
+        alt: "Celebration 4th of July"
+    },
+    {
+        image: "images/yummz.webp",
+        caption: "Sauces",
+        location: "Misawa",
+        age: "2",
+        season: "Summer",
+        fashionType: "Casual",
+        babyName: "Abby&Lucas",
+        alt: "Mustard and Ketchup"
+    },
+    {
+        image: "images/abbyyellow.webp",
+        caption: "Princess in yellow",
+        location: "Misawa",
+        age: "2",
+        season: "Summer",
+        fashionType: "Casual",
+        babyName: "Abby",
+        alt: "Abby chilling in yellow"
+    },
+    {
+        image: "images/sportyboy.webp",
+        caption: "Sport outfit",
+        location: "Misawa",
+        age: "2",
+        season: "Summer",
+        fashionType: "Casual",
+        babyName: "Lucas",
+        alt: "Lucas in a sport outfit"
+    },
+    // Add more outfits as needed...
 ];
 
-// Filter function for all filters combined
-function filterImages() {
-    const filterValue = document.getElementById("filterDropdown").value;
+// Function to render the outfits dynamically
+function renderOutfits(filteredOutfits) {
+    const container = document.getElementById('outfit-cards-container');
+    container.innerHTML = ''; // Clear the container first
 
-    let filteredOutfits = outfitData;
+    filteredOutfits.forEach((outfit) => {
+        const card = document.createElement('div');
+        card.className = 'outfit-card';
 
-    if (filterValue.startsWith('age_')) {
-        const age = filterValue.replace('age_', '');
-        filteredOutfits = filteredOutfits.filter(outfit => outfit.age == age);
-    } else if (filterValue.startsWith('location_')) {
-        const location = filterValue.replace('location_', '').toLowerCase();
-        filteredOutfits = filteredOutfits.filter(outfit => outfit.location.toLowerCase() === location);
-    } else if (filterValue.startsWith('fashion_')) {
-        const fashionType = filterValue.replace('fashion_', '').toLowerCase();
-        filteredOutfits = filteredOutfits.filter(outfit => outfit.fashionType.toLowerCase() === fashionType);
-    } else if (filterValue.startsWith('name_')) {
-        const babyName = filterValue.replace('name_', '');
-        filteredOutfits = filteredOutfits.filter(outfit => outfit.babyName === babyName);
-    }
+        const image = document.createElement('img');
+        image.src = outfit.image;
+        
+        image.alt = outfit.alt;  // Set alt attribute from data
+        image.loading = 'lazy';  // Enable lazy loading
 
-    displayOutfits(filteredOutfits);
-}
+        const caption = document.createElement('h2');
+        caption.textContent = outfit.caption;
 
-
-// Display function to render images and info
-function displayOutfits(outfits) {
-    const container = document.getElementById("outfit-cards-container");
-    container.innerHTML = ""; // Clear previous content
-
-    outfits.forEach(outfit => {
-        const card = document.createElement("div");
-        card.classList.add("outfit-card");
-
-        card.innerHTML = `
-            <img src="${outfit.image}" alt="${outfit.caption}" />
-            <h2>${outfit.caption}</h2>
-            <div class="info">
-                <p><strong>Location:</strong> ${outfit.location}</p>
-                <p><strong>Age:</strong> ${outfit.age} months</p>
-                <p><strong>Season:</strong> ${outfit.season}</p>
-                <p><strong>Fashion Type:</strong> ${outfit.fashionType}</p>
-            </div>
+        const info = document.createElement('div');
+        info.className = 'info';
+        info.innerHTML = `
+            <p>Location: ${outfit.location}</p>
+            <p>Age: ${outfit.age}</p>
+            <p>Fashion: ${outfit.fashionType}</p>
+            <p>Name: ${outfit.babyName}</p>
         `;
+
+        card.appendChild(image);
+        card.appendChild(caption);
+        card.appendChild(info);
         container.appendChild(card);
     });
 }
 
-// Call the display function initially to show all images
-window.onload = function () {
-    displayOutfits(outfitData);  // Display all outfits initially
-};
+// Initial render of all outfits
+renderOutfits(outfitData);
 
-document.addEventListener("DOMContentLoaded", function() {
-    const currentYearSpan = document.getElementById("currentyear");
-    const lastModifiedSpan = document.getElementById("lastModified");
+// Filter functionality
+function filterImages() {
+    const selectedValue = document.getElementById('filterDropdown').value;
 
-    const currentYear = new Date().getFullYear();
-    currentYearSpan.textContent = currentYear;
+    const filteredOutfits = outfitData.filter((outfit) => {
+        if (!selectedValue) return true; // If no filter is selected, show all outfits
 
-    
-    lastModifiedSpan.textContent = "Last Modification: " + document.lastModified;
-});
+        // Check for matching filters
+        if (selectedValue.startsWith('age_')) {
+            const ageFilter = selectedValue.replace('age_', '');
+            return outfit.age.includes(ageFilter);
+        } else if (selectedValue.startsWith('location_')) {
+            const locationFilter = selectedValue.replace('location_', '');
+            return outfit.location.toLowerCase() === locationFilter;
+        } else if (selectedValue.startsWith('fashion_')) {
+            const fashionFilter = selectedValue.replace('fashion_', '');
+            return outfit.fashionType.toLowerCase() === fashionFilter;
+        } else if (selectedValue.startsWith('name_')) {
+            const nameFilter = selectedValue.replace('name_', '');
+            return outfit.babyName.toLowerCase().includes(nameFilter.toLowerCase());
+        }
+        return false;
+    });
+
+    renderOutfits(filteredOutfits); // Re-render filtered outfits
+}
+
 // JavaScript for the hamburger menu toggle
 const menuButton = document.getElementById("menu");
 const navigation = document.querySelector(".navigation");
@@ -175,3 +175,6 @@ const form = document.getElementById('feedbackForm');
             form.reset();  // Reset the form fields
             thankYouMessage.style.display = 'block';  // Show the thank you message
         });
+// Dynamic year and last modified date in the footer
+document.getElementById('currentyear').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
