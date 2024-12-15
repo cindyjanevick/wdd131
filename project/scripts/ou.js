@@ -96,28 +96,27 @@ const outfitData = [
 
 // Filter function for all filters combined
 function filterImages() {
-    const age = document.getElementById("ageFilter").value;
-    const location = document.getElementById("locationFilter").value;
-    const fashionType = document.getElementById("fashionFilter").value;
-    const babyName = document.getElementById("babyNameFilter").value;
+    const filterValue = document.getElementById("filterDropdown").value;
 
     let filteredOutfits = outfitData;
 
-    if (age) {
+    if (filterValue.startsWith('age_')) {
+        const age = filterValue.replace('age_', '');
         filteredOutfits = filteredOutfits.filter(outfit => outfit.age == age);
-    }
-    if (location) {
-        filteredOutfits = filteredOutfits.filter(outfit => outfit.location.toLowerCase() === location.toLowerCase());
-    }
-    if (fashionType) {
-        filteredOutfits = filteredOutfits.filter(outfit => outfit.fashionType.toLowerCase() === fashionType.toLowerCase());
-    }
-    if (babyName && babyName !== "All") {
+    } else if (filterValue.startsWith('location_')) {
+        const location = filterValue.replace('location_', '').toLowerCase();
+        filteredOutfits = filteredOutfits.filter(outfit => outfit.location.toLowerCase() === location);
+    } else if (filterValue.startsWith('fashion_')) {
+        const fashionType = filterValue.replace('fashion_', '').toLowerCase();
+        filteredOutfits = filteredOutfits.filter(outfit => outfit.fashionType.toLowerCase() === fashionType);
+    } else if (filterValue.startsWith('name_')) {
+        const babyName = filterValue.replace('name_', '');
         filteredOutfits = filteredOutfits.filter(outfit => outfit.babyName === babyName);
     }
 
     displayOutfits(filteredOutfits);
 }
+
 
 // Display function to render images and info
 function displayOutfits(outfits) {

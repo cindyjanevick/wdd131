@@ -30,44 +30,41 @@
     <!-- Main Content -->
     <main>
         <div class="filters">
-            <select id="ageFilter">
-                <option value="">Age</option>
-                <option value="0">0 months</option>
-                <option value="1">1 month</option>
-                <option value="2">2 months</option>
-                <option value="3">3 months</option>
-                <option value="4">4 months</option>
-                <option value="5">5 months</option>
-                <option value="6">6 months</option>
-                <option value="7">7 months</option>
-                <option value="8">8 months</option>
-                <option value="9">9 months</option>
-                <option value="10">10 months</option>
-                <option value="11">11 months</option>
-                <option value="12">12 months</option>
+            <select id="filterDropdown">
+                <option value="">Filter by</option>
+                <optgroup label="Age">
+                    <option value="age_0">0 months</option>
+                    <option value="age_1">1 month</option>
+                    <option value="age_2">2 months</option>
+                    <option value="age_3">3 months</option>
+                    <option value="age_4">4 months</option>
+                    <option value="age_5">5 months</option>
+                    <option value="age_6">6 months</option>
+                    <option value="age_7">7 months</option>
+                    <option value="age_8">8 months</option>
+                    <option value="age_9">9 months</option>
+                    <option value="age_10">10 months</option>
+                    <option value="age_11">11 months</option>
+                    <option value="age_12">12 months</option>
+                </optgroup>
+                <optgroup label="Location">
+                    <option value="location_hawaii">Hawaii</option>
+                    <option value="location_misawa">Misawa</option>
+                </optgroup>
+                <optgroup label="Fashion Type">
+                    <option value="fashion_casual">Casual</option>
+                    <option value="fashion_formal">Formal</option>
+                </optgroup>
+                <optgroup label="Baby Name">
+                    <option value="name_Abby">Abby</option>
+                    <option value="name_Lucas">Lucas</option>
+                    <option value="name_AbbyLucas">Abby & Lucas</option>
+                </optgroup>
             </select>
-
-            <select id="locationFilter">
-                <option value="">Location</option>
-                <option value="hawaii">Hawaii</option>
-                <option value="misawa">Misawa</option>
-            </select>
-
-            <select id="fashionFilter">
-                <option value="">Fashion Type</option>
-                <option value="casual">Casual</option>
-                <option value="formal">Formal</option>
-            </select>
-
-            <select id="babyNameFilter">
-                <option value="All">All</option>
-                <option value="Abby">Abby</option>
-                <option value="Lucas">Lucas</option>
-                <option value="Abby&Lucas">Abby & Lucas</option>
-            </select>
-
-            <button class="filter-btn" onclick="filterImages()">Apply Filters</button>
+        
+            <button class="filter-btn" onclick="filterImages()">Apply Filter</button>
         </div>
+        
 
         <!-- Outfit Cards -->
         <div id="outfit-cards-container"></div>
